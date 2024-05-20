@@ -1,150 +1,152 @@
-@font-face {
-    font-family: 'SourceSansPro';
-    src: url('../fonts/source-sans-pro/SourceSansPro-Regular.otf') format('opentype');  
-
-    font-family: 'HelveticaNeue'; 
-    src: url('../fonts/helvetica-neue/HelveticaNeueLight.otf') format('opentype'); 
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 .header {
-    width: 100%;
-    height: 100px;
-    background-color:  white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
 }
-
-.header-box1 {
-    width: 301px;
-    height: 100px;
-    background-color:  #DDDDDD;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-bottom-left-radius: 5px; 
-    border-bottom-right-radius: 5px; 
-    z-index: 1;
+.header .header-box-left,
+.header .header-box-right {
+  height: 100px;
+  background-color: #DDDDDD;
+  border-radius: 0 0 5px 5px;
 }
-
-.header-box2 {
-    width: 100%;
-    height: 100px;
-    background-color:  #DDDDDD;
-    position: absolute;
-    left: 320px;
-    top: 0;
-    right: 0;
-    border-bottom-left-radius: 5px; 
-    border-bottom-right-radius: 5px; 
-    z-index: 1;
+.header .header-box-left {
+  width: 301px;
 }
-
-.header-content {
-    font-family: 'HelveticaNeue';
-    font-size: 15px;
-    color: #FFFFFF;
-    margin-top: 39px;
-    text-align: center;
-    position: relative;
-    z-index: 2; 
+.header .header-box-right {
+  width: 621px;
+}
+.header .header-content {
+  width: 245px;
+  height: 18px;
+  font-size: 15px;
+  line-height: 17.58px;
+  font-weight: normal;
+  letter-spacing: normal;
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 39px;
+  margin-left: 400px;
 }
 
 .footer {
-    width: 100%;
-    height: 100px;
-    background-color: #DDDDDD;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-} 
-
-.footer-content {
-    font-family: 'HelveticaNeue';
-    font-size: 15px;
-    color: #FFFFFF;
-    margin-top: 42px;
-    margin-left: 81px;
-    position: relative;
-    z-index: 2; 
+  width: 100%;
+  height: 100px;
+  background-color: #DDDDDD;
+  margin-top: auto;
+  display: flex;
+  border-radius: 5px 5px 0 0;
+}
+.footer .footer-content {
+  width: 245px;
+  height: 18px;
+  font-size: 15px;
+  line-height: 17.58px;
+  font-weight: normal;
+  letter-spacing: normal;
+  color: #FFFFFF;
+  margin-top: 42px;
+  margin-left: 81px;
 }
 
-.image img {
-    width: 100%; 
-    height: 200px; 
-    display: block;
-    border-radius: 4px;
+.content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.content-container .slides-container {
+  width: 619px;
+  overflow: hidden;
+}
+.content-container .slides-container .slide-top-row, .content-container .slides-container .slide-bottom-row {
+  display: flex;
+  gap: 10px;
+  height: 200px;
+}
+.content-container .slides-container .slide-top-row {
+  width: 1230px;
+  margin-left: -611px;
+}
+.content-container .slides-container .slide-bottom-row {
+  width: 1080px;
+  margin-top: 10px;
+  margin-left: -621px;
+}
+.content-container .slides-container .image img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  border-radius: 4px;
+}
+.content-container .text-container {
+  display: flex;
+  flex-direction: column;
+  width: 301px;
+  height: 296px;
+  gap: 20px;
+}
+.content-container .text-container .text-box-top {
+  width: 300.93px;
+  height: 120px;
+}
+.content-container .text-container .text-box-bottom {
+  width: 300.93px;
+  height: 156px;
+}
+.content-container .text-container .text-top {
+  font-size: 32px;
+  line-height: 37.5px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #134880;
+}
+.content-container .text-container .text-bottom {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: normal;
+  letter-spacing: normal;
+  color: #484A4C;
 }
 
-.top-row {
-    display: flex;
-    gap: 10px;
-    width: 1230px;
-    height: 200px;
-    margin-top: 145px;
-    margin-left: -120px;
-    margin-bottom: 20px;
+.button-container {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 210px;
+  margin-left: -400px;
+  position: relative;
+}
+.button-container .previous-button,
+.button-container .next-button {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-container .previous-button:hover,
+.button-container .next-button:hover {
+  border: 1px solid #134880;
 }
 
-.bottom-row {
-    display: flex;
-    gap: 10px;
-    width: 1080px;
-    height: 200px;
-    top: 370px;
-    margin-left: -130px;
+body {
+  font-family: "Source Sans 3", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.text-box1 {
-    display: flex;
-    width: 300.93px;
-    height: 120px;
-    left: 1130px;
-    top: 160px;
-    margin-top: -35px;
-    position: absolute;
+.flex-container {
+  max-width: 940px;
+  max-height: 730px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  gap: 60px;
 }
 
-.text-box2 {
-    display: flex;
-    width: 300.93px;
-    height: 156px;
-    left: 1130px;
-    top: 280px;
-    position: absolute;
-}
-
-.text1 {
-    font-family: 'SourceSansPro';
-    font-weight: bold;
-    font-size: 32px;
-    color: #134880;
-}
-
-.text2 {
-    font-family: 'SourceSansPro';
-    font-size: 18px;
-    line-height: 17.58px;
-}
-
-.previous-button,
-.next-button {
-    width: 60px;
-    height: 60px;
-    left: 1050px;
-    cursor: pointer;
-    border-radius: 4px;
-    position: absolute;
-}
-
-.previous-button {
-    top: 365px; 
-}
-
-.next-button {
-    top: 435px; 
-}
+/*# sourceMappingURL=style.css.map */

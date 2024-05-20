@@ -1,0 +1,11 @@
+@mixin font-styles($size, $line-height, $weight: normal, $letter-spacing: normal, $color: inherit) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+    letter-spacing: $letter-spacing;
+    color: $color;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
